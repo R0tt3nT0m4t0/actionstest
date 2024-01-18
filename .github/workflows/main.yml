@@ -1,0 +1,14 @@
+name: Build and Push Container
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Build Image
+        run: |
+          podman build -t my-container .
