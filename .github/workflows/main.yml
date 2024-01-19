@@ -10,5 +10,6 @@ jobs:
     
     steps:
       - name: Build Image
+        working-directory: app
         run: |
-          podman build -t myimage:latest -f ./Containerfile
+          podman build -t myimage:latest .
