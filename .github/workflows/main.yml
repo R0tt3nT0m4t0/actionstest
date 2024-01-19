@@ -9,6 +9,11 @@ jobs:
     runs-on: self-hosted
     
     steps:
+    
+      - name: Clean Repo
+        run: |
+          rm -rf actionstest
+          
       - name: Clone Repo
         run: |
           git clone git@github.com:R0tt3nT0m4t0/actionstest.git
@@ -17,3 +22,4 @@ jobs:
         run: |
           cd actionstest
           podman build -t myimage:latest .
+
