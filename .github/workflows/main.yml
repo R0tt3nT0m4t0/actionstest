@@ -9,7 +9,10 @@ jobs:
     runs-on: self-hosted
     
     steps:
+      - name: Clone Repo
+        run: |
+          git clone git@github.com:R0tt3nT0m4t0/actionstest.git
+        
       - name: Build Image
-        working-directory: app
         run: |
           podman build -t myimage:latest .
