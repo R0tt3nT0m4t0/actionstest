@@ -15,5 +15,5 @@ jobs:
         
       - name: Build Image
         run: |
-          cd actiontest
+          cd actionstest
           podman build -t myimage:latest .
